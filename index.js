@@ -10,6 +10,7 @@ const orderRoute = require ('./routes/order')
 dotenv.config();
 const stripeRoute = require('./routes/stripe')
 const cors = require ('cors')
+const port = process.env.PORT || 5000;
 
 mongoose.set("strictQuery", false);
 
@@ -25,6 +26,6 @@ app.use("/api/carts", cartRoute);
 app.use("/api/orders", orderRoute);
 app.use("/api/checkout", stripeRoute);
 
-app.listen(process.env.PORT || 5000, () =>{
+app.listen(port, () =>{
     console.log("Backend server is running!")
 })
