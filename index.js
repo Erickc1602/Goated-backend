@@ -27,5 +27,5 @@ app.use("/api/orders", orderRoute);
 app.use("/api/checkout", stripeRoute);
 
 app.listen(port, () =>{
-    console.log("Backend server is running!")
+    console.log("Backend server running!")
 })
